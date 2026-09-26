@@ -1,0 +1,2 @@
+Coloque aqui a planilha oficial do desafio: vin_share_Desafio_02.xlsx (aba vin_share).
+Ela não vai no pacote nem no repositório: são 81 MB de dados da Ford, distribuídos pelo canal do challenge.

@@ -1,0 +1,201 @@
+{
+  "veiculo": {
+    "modelo": "RANGER",
+    "ano_modelo": 2020.0,
+    "data_nf": "2019-10-25",
+    "data_venda": "2020-01-28",
+    "data_entrega": "2020-01-28",
+    "data_emplacamento": "2020-01-28",
+    "data_garantia": "2020-01-28"
+  },
+  "visitas": [
+    {
+      "data": "2020-06-09",
+      "abertura": "2020-06-09",
+      "fechamento": "2020-06-09",
+      "revisao": 1,
+      "km": 10230.0,
+      "concessionaria": "1105",
+      "fonte": "Official Maintenance",
+      "agendado": false,
+      "codigo_servico": "1353"
+    },
+    {
+      "data": "2020-10-21",
+      "abertura": "2020-10-21",
+      "fechamento": "2020-10-23",
+      "revisao": 2,
+      "km": 19669.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "24"
+    },
+    {
+      "data": "2021-06-16",
+      "abertura": "2021-06-16",
+      "fechamento": "2021-06-16",
+      "revisao": 3,
+      "km": 29322.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "573"
+    },
+    {
+      "data": "2021-11-25",
+      "abertura": "2021-11-25",
+      "fechamento": "2021-11-25",
+      "revisao": 4,
+      "km": 41133.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "574"
+    },
+    {
+      "data": "2022-03-04",
+      "abertura": "2022-03-04",
+      "fechamento": "2022-03-04",
+      "revisao": 5,
+      "km": 52493.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "575"
+    },
+    {
+      "data": "2022-05-23",
+      "abertura": "2022-05-23",
+      "fechamento": "2022-05-23",
+      "revisao": 6,
+      "km": 61969.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "441"
+    },
+    {
+      "data": "2022-08-24",
+      "abertura": "2022-08-24",
+      "fechamento": "2022-08-25",
+      "revisao": 7,
+      "km": 71783.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance + GUDB",
+      "agendado": true,
+      "codigo_servico": "687"
+    },
+    {
+      "data": "2022-12-09",
+      "abertura": "2022-12-09",
+      "fechamento": "2022-12-10",
+      "revisao": 8,
+      "km": 82347.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance + GUDB",
+      "agendado": true,
+      "codigo_servico": "881"
+    },
+    {
+      "data": "2023-02-27",
+      "abertura": "2023-02-27",
+      "fechamento": "2023-02-27",
+      "revisao": 9,
+      "km": 90399.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "881"
+    },
+    {
+      "data": "2023-05-24",
+      "abertura": "2023-05-24",
+      "fechamento": "2023-05-24",
+      "revisao": 10,
+      "km": 100615.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "690"
+    },
+    {
+      "data": "2023-08-31",
+      "abertura": "2023-08-31",
+      "fechamento": "2023-08-31",
+      "revisao": 11,
+      "km": 110856.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "702"
+    },
+    {
+      "data": "2023-12-15",
+      "abertura": "2023-12-15",
+      "fechamento": "2023-12-15",
+      "revisao": 12,
+      "km": 120646.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "23"
+    },
+    {
+      "data": "2024-04-12",
+      "abertura": "2024-04-12",
+      "fechamento": "2024-04-13",
+      "revisao": 13,
+      "km": 130324.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "704"
+    },
+    {
+      "data": "2024-08-14",
+      "abertura": "2024-08-14",
+      "fechamento": "2024-08-15",
+      "revisao": 14,
+      "km": 140741.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "881"
+    },
+    {
+      "data": "2024-11-13",
+      "abertura": "2024-11-13",
+      "fechamento": "2024-11-14",
+      "revisao": 15,
+      "km": 150509.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "1226"
+    },
+    {
+      "data": "2025-08-01",
+      "abertura": "2025-08-01",
+      "fechamento": "2025-08-01",
+      "revisao": 16,
+      "km": 170734.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "1226"
+    },
+    {
+      "data": "2026-01-05",
+      "abertura": "2026-01-05",
+      "fechamento": "2026-01-05",
+      "revisao": 17,
+      "km": 181386.0,
+      "concessionaria": "1105",
+      "fonte": "Agenda + Official Maintenance",
+      "agendado": true,
+      "codigo_servico": "1226"
+    }
+  ],
+  "volume_loja_12m": 1482.0
+}

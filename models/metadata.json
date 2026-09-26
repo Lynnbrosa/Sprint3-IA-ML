@@ -1,0 +1,78 @@
+{
+  "versao": "sprint3-2026.09",
+  "algoritmo": "XGBoost (pipeline scikit-learn)",
+  "treinado_com": {
+    "visitas": 438168,
+    "ate": "2026-05-04"
+  },
+  "hiperparametros": {
+    "subsample": 0.9,
+    "scale_pos_weight": 1,
+    "reg_lambda": 5,
+    "n_estimators": 1000,
+    "min_child_weight": 20,
+    "max_depth": 4,
+    "learning_rate": 0.02,
+    "colsample_bytree": 0.6
+  },
+  "features": [
+    "modelo",
+    "defasagem_ano_modelo",
+    "dias_estoque",
+    "lag_entrega",
+    "lag_emplacamento",
+    "mes_venda",
+    "revisao",
+    "km",
+    "fonte",
+    "mes_visita",
+    "km_excedente",
+    "dias_ate_proxima",
+    "proxima_fora_garantia",
+    "dias_restantes_garantia",
+    "intervalo_dias",
+    "km_desde_anterior",
+    "trocou_concessionaria",
+    "n_concessionarias",
+    "atraso_medio_hist",
+    "concessionaria",
+    "volume_loja_12m"
+  ],
+  "alvo": {
+    "definicao": "sem visita na rede até min(365 dias, 10 mil km) + tolerância",
+    "tolerancia_dias": 90
+  },
+  "limiar": 0.29540881514549255,
+  "faixas": {
+    "CRITICA": 0.5697088241577148,
+    "ALTA": 0.40727499127388,
+    "MEDIA": 0.29093417525291443
+  },
+  "metricas_teste": {
+    "ROC-AUC": 0.6981,
+    "PR-AUC": 0.547,
+    "F1": 0.2971,
+    "precisão": 0.6162,
+    "recall": 0.1957,
+    "acurácia bal.": 0.5641,
+    "Brier": 0.2088
+  },
+  "modelos_conhecidos": [
+    "BRONCO SPORT",
+    "ECOSPORT",
+    "F-150",
+    "KA",
+    "MAVERICK",
+    "MUSTANG",
+    "OUTROS",
+    "RANGER",
+    "TERRITORY",
+    "TRANSIT"
+  ],
+  "versoes": {
+    "python": "3.13.14",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  }
+}
