@@ -18,6 +18,7 @@ que enxerga o histórico da concessionária inteira.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 from functools import lru_cache
@@ -32,13 +33,20 @@ import features_revisao as fr  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 MODELO = RAIZ / "models" / "modelo_evasao.joblib"
+# joblib é pickle por baixo: carregar um arquivo trocado roda o código de quem trocou.
+# o hash fica aqui, revisado no PR, e não do lado do arquivo (senão troca junto).
+# retreinou: python -c "import hashlib; print(hashlib.sha256(open('models/modelo_evasao.joblib', 'rb').read()).hexdigest())"
+MODELO_SHA256 = "d19d2248f2e62fc1d5b97f2bc9cf2706f9081addf6927fd45b796b89e29fcba8"
 COLS_DATA = ["data", "abertura", "fechamento", "data_nf", "data_venda", "data_entrega",
              "data_emplacamento", "data_garantia"]
 
 
 @lru_cache(maxsize=1)
-def carregar(caminho: str | None = None):
+def carregar(caminho: str | None = None, sha256: str | None = None):
     caminho = Path(caminho) if caminho else MODELO
+    if hashlib.sha256(caminho.read_bytes()).hexdigest() != (sha256 or MODELO_SHA256):
+        raise ValueError(f"{caminho.name} não bate com o SHA-256 esperado: modelo trocado ou "
+                         "retreinado sem atualizar MODELO_SHA256")
     meta = json.loads(caminho.with_name("metadata.json").read_text(encoding="utf-8"))
     return joblib.load(caminho), meta
 
@@ -74,8 +82,8 @@ def historico_para_visitas(req: dict) -> pd.DataFrame:
     return visitas.sort_values("data", kind="stable").reset_index(drop=True)
 
 
-def classificar(req: dict, caminho_modelo: str | None = None) -> dict:
-    modelo, meta = carregar(caminho_modelo)
+def classificar(req: dict, caminho_modelo: str | None = None, sha256_modelo: str | None = None) -> dict:
+    modelo, meta = carregar(caminho_modelo, sha256_modelo)
     visitas = historico_para_visitas(req)
     # modelo fora da lista do treino cai no mesmo balde dos raros
     visitas["modelo"] = visitas["modelo"].where(visitas["modelo"].isin(meta["modelos_conhecidos"]), "OUTROS")

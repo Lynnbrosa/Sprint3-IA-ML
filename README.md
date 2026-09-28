@@ -73,6 +73,8 @@ python src/inferencia.py src/exemplo_requisicao.json
 
 Devolve probabilidade de evasão, faixa de prioridade (CRÍTICA, ALTA, MÉDIA, BAIXA), se vira lead, perfil sugerido (Fiel, Econômico, Esquecido, Abandono) e a data estimada da próxima revisão.
 
+Antes de carregar, o `inferencia.py` confere o SHA-256 do `modelo_evasao.joblib`: o joblib executa código ao desserializar, e um arquivo trocado rodaria o código de quem trocou. Se retreinar o modelo, atualize `MODELO_SHA256` no mesmo commit (o comando está no comentário da constante).
+
 ## O que o notebook cobre
 
 | Critério da sprint | Seção |
